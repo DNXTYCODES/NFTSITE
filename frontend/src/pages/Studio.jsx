@@ -103,7 +103,9 @@ const Studio = () => {
                     </p>
                   </div>
                   <div>
-                    <p className="text-slate-600 dark:text-slate-400">Created</p>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Created
+                    </p>
                     <p className="font-semibold text-slate-900 dark:text-white">
                       {collection.created}
                     </p>

@@ -114,100 +114,103 @@ const App = () => {
 
       <div className="flex">
         <Sidebar />
-        <main id="main-content" className="flex-1 ml-20 transition-all duration-300">
+        <main
+          id="main-content"
+          className="flex-1 ml-20 transition-all duration-300"
+        >
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <SearchBar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/solarpackages"
-              element={
-                <div itemScope itemType="https://schema.org/OfferCatalog">
-                  <SolarPackagesPage />
-                </div>
-              }
-            />
-            <Route
-              path="/solarcalculator"
-              element={
-                <div itemScope itemType="https://schema.org/WebApplication">
-                  <SolarCalculatorPage />
-                </div>
-              }
-            />
-            <Route
-              path="/training"
-              element={
-                <div itemScope itemType="https://schema.org/EducationEvent">
-                  <TrainingPrograms />
-                </div>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <div itemScope itemType="https://schema.org/AboutPage">
-                  <About />
-                </div>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <div itemScope itemType="https://schema.org/ContactPage">
-                  <Contact />
-                </div>
-              }
-            />
-            <Route path="/player/:playerId" element={<Player />} />
-            <Route
-              path="/ourwork"
-              element={
-                <div itemScope itemType="https://schema.org/PortfolioPage">
-                  <OurWork />
-                </div>
-              }
-            />
-            <Route
-              path="/services"
-              element={
-                <div itemScope itemType="https://schema.org/Service">
-                  <Services />
-                </div>
-              }
-            />
-            <Route
-              path="/collection"
-              element={
-                <div itemScope itemType="https://schema.org/ItemList">
-                  <Collection />
-                </div>
-              }
-            />
-            <Route
-              path="/product/:productId"
-              element={
-                <div itemScope itemType="https://schema.org/Product">
-                  <Product />
-                </div>
-              }
-            />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/solarpackages"
+                element={
+                  <div itemScope itemType="https://schema.org/OfferCatalog">
+                    <SolarPackagesPage />
+                  </div>
+                }
+              />
+              <Route
+                path="/solarcalculator"
+                element={
+                  <div itemScope itemType="https://schema.org/WebApplication">
+                    <SolarCalculatorPage />
+                  </div>
+                }
+              />
+              <Route
+                path="/training"
+                element={
+                  <div itemScope itemType="https://schema.org/EducationEvent">
+                    <TrainingPrograms />
+                  </div>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <div itemScope itemType="https://schema.org/AboutPage">
+                    <About />
+                  </div>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <div itemScope itemType="https://schema.org/ContactPage">
+                    <Contact />
+                  </div>
+                }
+              />
+              <Route path="/player/:playerId" element={<Player />} />
+              <Route
+                path="/ourwork"
+                element={
+                  <div itemScope itemType="https://schema.org/PortfolioPage">
+                    <OurWork />
+                  </div>
+                }
+              />
+              <Route
+                path="/services"
+                element={
+                  <div itemScope itemType="https://schema.org/Service">
+                    <Services />
+                  </div>
+                }
+              />
+              <Route
+                path="/collection"
+                element={
+                  <div itemScope itemType="https://schema.org/ItemList">
+                    <Collection />
+                  </div>
+                }
+              />
+              <Route
+                path="/product/:productId"
+                element={
+                  <div itemScope itemType="https://schema.org/Product">
+                    <Product />
+                  </div>
+                }
+              />
 
-            {/* NFT Marketplace Routes */}
-            <Route path="/" element={<Discover />} />
-            <Route path="/collections" element={<Collections />} />
-            <Route path="/tokens" element={<Tokens />} />
-            <Route path="/swap" element={<Swap />} />
-            <Route path="/drops" element={<Drops />} />
-            <Route path="/activity" element={<Activity />} />
-            <Route path="/rewards" element={<Rewards />} />
-            <Route path="/studio" element={<Studio />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/support" element={<Support />} />
-          </Routes>
+              {/* NFT Marketplace Routes */}
+              <Route path="/" element={<Discover />} />
+              <Route path="/collections" element={<Collections />} />
+              <Route path="/tokens" element={<Tokens />} />
+              <Route path="/swap" element={<Swap />} />
+              <Route path="/drops" element={<Drops />} />
+              <Route path="/activity" element={<Activity />} />
+              <Route path="/rewards" element={<Rewards />} />
+              <Route path="/studio" element={<Studio />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/support" element={<Support />} />
+            </Routes>
           </div>
         </main>
       </div>

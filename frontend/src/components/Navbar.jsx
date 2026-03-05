@@ -48,25 +48,26 @@ const Navbar = () => {
   return (
     <>
       {/* NEW OPENSEA-STYLE NAVBAR */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? theme === "dark"
-            ? "backdrop-blur-lg bg-slate-900/70 border-b border-slate-700/50"
-            : "backdrop-blur-lg bg-white/80 border-b border-slate-200/50"
-          : theme === "dark"
-          ? "bg-slate-950 border-b border-slate-800/30"
-          : "bg-white border-b border-slate-100/50"
-      }`}>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? theme === "dark"
+              ? "backdrop-blur-lg bg-slate-900/70 border-b border-slate-700/50"
+              : "backdrop-blur-lg bg-white/80 border-b border-slate-200/50"
+            : theme === "dark"
+              ? "bg-slate-950 border-b border-slate-800/30"
+              : "bg-white border-b border-slate-100/50"
+        }`}
+      >
         <div className="mx-auto w-full max-w-[calc(theme(screens.4xl)+48px)] px-4 lg:px-6">
           <div className="flex items-center justify-between h-16">
-            
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`flex items-center gap-2 font-bold text-2xl transition-colors ${
-                  theme === "dark" 
-                    ? "text-white hover:text-blue-400" 
+                  theme === "dark"
+                    ? "text-white hover:text-blue-400"
                     : "text-slate-900 hover:text-blue-600"
                 }`}
               >
@@ -78,14 +79,16 @@ const Navbar = () => {
             {/* Search Bar - Desktop */}
             <div className="hidden lg:flex flex-1 mx-8 max-w-sm">
               <form onSubmit={handleSearchSubmit} className="w-full">
-                <div className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all duration-150 ${
-                  theme === "dark"
-                    ? "bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60 focus-within:bg-slate-800"
-                    : "bg-slate-50 border-slate-200 hover:bg-slate-100 focus-within:bg-white"
-                }`}>
-                  <svg 
+                <div
+                  className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all duration-150 ${
+                    theme === "dark"
+                      ? "bg-slate-800/40 border-slate-700/50 hover:bg-slate-800/60 focus-within:bg-slate-800"
+                      : "bg-slate-50 border-slate-200 hover:bg-slate-100 focus-within:bg-white"
+                  }`}
+                >
+                  <svg
                     className={`w-4 h-4 flex-shrink-0 ${theme === "dark" ? "text-slate-400" : "text-slate-500"}`}
-                    fill="currentColor" 
+                    fill="currentColor"
                     viewBox="0 -960 960 960"
                   >
                     <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
@@ -96,8 +99,8 @@ const Navbar = () => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search collections, items..."
                     className={`w-full bg-transparent outline-none text-sm ${
-                      theme === "dark" 
-                        ? "text-white placeholder:text-slate-400" 
+                      theme === "dark"
+                        ? "text-white placeholder:text-slate-400"
                         : "text-slate-900 placeholder:text-slate-500"
                     }`}
                   />
@@ -113,13 +116,14 @@ const Navbar = () => {
                   to={item.path}
                   className={({ isActive }) => `
                     px-4 py-2 text-sm font-medium rounded-md transition-all duration-200
-                    ${isActive
-                      ? theme === "dark"
-                        ? "bg-blue-600 text-white"
-                        : "bg-blue-100 text-blue-900"
-                      : theme === "dark"
-                      ? "text-slate-300 hover:bg-slate-800"
-                      : "text-slate-700 hover:bg-slate-100"
+                    ${
+                      isActive
+                        ? theme === "dark"
+                          ? "bg-blue-600 text-white"
+                          : "bg-blue-100 text-blue-900"
+                        : theme === "dark"
+                          ? "text-slate-300 hover:bg-slate-800"
+                          : "text-slate-700 hover:bg-slate-100"
                     }
                   `}
                 >
@@ -131,16 +135,20 @@ const Navbar = () => {
             {/* Right Actions */}
             <div className="flex items-center gap-2">
               {/* Connect Wallet Button */}
-              <button className={`hidden md:inline-flex px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 ${
-                theme === "dark"
-                  ? "bg-slate-800 text-white hover:bg-slate-700 border border-slate-700"
-                  : "bg-slate-100 text-slate-900 hover:bg-slate-200 border border-slate-300"
-              }`}>
+              <button
+                className={`hidden md:inline-flex px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 ${
+                  theme === "dark"
+                    ? "bg-slate-800 text-white hover:bg-slate-700 border border-slate-700"
+                    : "bg-slate-100 text-slate-900 hover:bg-slate-200 border border-slate-300"
+                }`}
+              >
                 Connect Wallet
               </button>
 
               {/* Divider */}
-              <div className={`hidden md:block w-px h-6 ${theme === "dark" ? "bg-slate-700/50" : "bg-slate-300/50"}`}></div>
+              <div
+                className={`hidden md:block w-px h-6 ${theme === "dark" ? "bg-slate-700/50" : "bg-slate-300/50"}`}
+              ></div>
 
               {/* Profile/Account */}
               <Link
@@ -152,10 +160,7 @@ const Navbar = () => {
                 }`}
                 aria-label="Profile"
               >
-                <svg
-                  className="w-5 h-5 fill-current"
-                  viewBox="0 -960 960 960"
-                >
+                <svg className="w-5 h-5 fill-current" viewBox="0 -960 960 960">
                   <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Z" />
                 </svg>
               </Link>
@@ -171,11 +176,19 @@ const Navbar = () => {
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M10 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1zm4.22 1.78a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm2.828 2.828a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-5.656 5.656a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM5 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm3.464 4.464a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm2.828 2.828a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM5.464 5.464a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414z" />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                   </svg>
                 )}
@@ -190,8 +203,18 @@ const Navbar = () => {
                     : "hover:bg-slate-100 text-slate-700"
                 }`}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               </button>
             </div>
@@ -287,23 +310,28 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      */ }
+      */}
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className={`fixed inset-0 z-40 lg:hidden ${theme === "dark" ? "bg-slate-950/95" : "bg-white/95"} backdrop-blur-sm`}>
-          <div className={`flex flex-col h-full pt-20 px-4 ${theme === "dark" ? "bg-slate-950" : "bg-white"}`}>
-            
+        <div
+          className={`fixed inset-0 z-40 lg:hidden ${theme === "dark" ? "bg-slate-950/95" : "bg-white/95"} backdrop-blur-sm`}
+        >
+          <div
+            className={`flex flex-col h-full pt-20 px-4 ${theme === "dark" ? "bg-slate-950" : "bg-white"}`}
+          >
             {/* Mobile Search */}
             <form onSubmit={handleSearchSubmit} className="mb-6">
-              <div className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all ${
-                theme === "dark"
-                  ? "bg-slate-800/40 border-slate-700/50"
-                  : "bg-slate-50 border-slate-200"
-              }`}>
-                <svg 
+              <div
+                className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all ${
+                  theme === "dark"
+                    ? "bg-slate-800/40 border-slate-700/50"
+                    : "bg-slate-50 border-slate-200"
+                }`}
+              >
+                <svg
                   className={`w-4 h-4 flex-shrink-0 ${theme === "dark" ? "text-slate-400" : "text-slate-500"}`}
-                  fill="currentColor" 
+                  fill="currentColor"
                   viewBox="0 -960 960 960"
                 >
                   <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
@@ -314,8 +342,8 @@ const Navbar = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search..."
                   className={`w-full bg-transparent outline-none text-sm ${
-                    theme === "dark" 
-                      ? "text-white placeholder:text-slate-400" 
+                    theme === "dark"
+                      ? "text-white placeholder:text-slate-400"
                       : "text-slate-900 placeholder:text-slate-500"
                   }`}
                 />
@@ -331,13 +359,14 @@ const Navbar = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={({ isActive }) => `
                       block px-4 py-3 rounded-md font-medium transition-all
-                      ${isActive
-                        ? theme === "dark"
-                          ? "bg-blue-600 text-white"
-                          : "bg-blue-100 text-blue-900"
-                        : theme === "dark"
-                        ? "text-slate-300 hover:bg-slate-800"
-                        : "text-slate-700 hover:bg-slate-100"
+                      ${
+                        isActive
+                          ? theme === "dark"
+                            ? "bg-blue-600 text-white"
+                            : "bg-blue-100 text-blue-900"
+                          : theme === "dark"
+                            ? "text-slate-300 hover:bg-slate-800"
+                            : "text-slate-700 hover:bg-slate-100"
                       }
                     `}
                   >
@@ -348,12 +377,20 @@ const Navbar = () => {
             </ul>
 
             {/* Mobile Actions */}
-            <div className="space-y-3 border-t pt-4" style={{borderColor: theme === "dark" ? "rgb(51, 65, 85)" : "rgb(226, 232, 240)"}}>
-              <button className={`w-full px-4 py-3 rounded-md font-medium transition-all ${
-                theme === "dark"
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-blue-600 text-white hover:bg-blue-700"
-              }`}>
+            <div
+              className="space-y-3 border-t pt-4"
+              style={{
+                borderColor:
+                  theme === "dark" ? "rgb(51, 65, 85)" : "rgb(226, 232, 240)",
+              }}
+            >
+              <button
+                className={`w-full px-4 py-3 rounded-md font-medium transition-all ${
+                  theme === "dark"
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
+              >
                 Connect Wallet
               </button>
 
@@ -367,14 +404,22 @@ const Navbar = () => {
               >
                 {theme === "dark" ? (
                   <>
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M10 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1z" />
                     </svg>
                     Light Mode
                   </>
                 ) : (
                   <>
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                     </svg>
                     Dark Mode

@@ -97,8 +97,8 @@ const TrendingCollections = () => {
                     ? "bg-blue-600 text-white border border-blue-500"
                     : "bg-blue-100 text-blue-900 border border-blue-300"
                   : theme === "dark"
-                  ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
-                  : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
+                    ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
+                    : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
               }`}
             >
               <svg
@@ -123,8 +123,8 @@ const TrendingCollections = () => {
                     ? "bg-blue-600 text-white border border-blue-500"
                     : "bg-blue-100 text-blue-900 border border-blue-300"
                   : theme === "dark"
-                  ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
-                  : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
+                    ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
+                    : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
               }`}
             >
               <svg
@@ -180,9 +180,7 @@ const TrendingCollections = () => {
             key={collection.id}
             href={`/collection/${collection.name.toLowerCase().replace(/\s+/g, "-")}`}
             className={`flex justify-between items-center p-4 transition-all duration-200 cursor-pointer ${
-              theme === "dark"
-                ? "hover:bg-slate-800/50"
-                : "hover:bg-slate-100"
+              theme === "dark" ? "hover:bg-slate-800/50" : "hover:bg-slate-100"
             }`}
           >
             <div className="flex items-center gap-3 flex-1 min-w-0 max-w-[65%]">
@@ -204,7 +202,12 @@ const TrendingCollections = () => {
                   >
                     {collection.chain === "ethereum" ? (
                       <g fill="none" fillRule="nonzero">
-                        <rect fill="#627EEA" height="24" rx="0" width="24"></rect>
+                        <rect
+                          fill="#627EEA"
+                          height="24"
+                          rx="0"
+                          width="24"
+                        ></rect>
                         <g fill="#FFF">
                           <path
                             d="M11.998 3v6.652l5.623 2.513z"
@@ -220,12 +223,20 @@ const TrendingCollections = () => {
                             d="m11.998 15.43 5.623-3.265L12 9.654z"
                             fillOpacity="0.2"
                           ></path>
-                          <path d="m6.375 12.165 5.623 3.265V9.654z" fillOpacity="0.602"></path>
+                          <path
+                            d="m6.375 12.165 5.623 3.265V9.654z"
+                            fillOpacity="0.602"
+                          ></path>
                         </g>
                       </g>
                     ) : (
                       <g fill="none" fillRule="nonzero">
-                        <rect fill="#6C00F6" height="24" rx="0" width="24"></rect>
+                        <rect
+                          fill="#6C00F6"
+                          height="24"
+                          rx="0"
+                          width="24"
+                        ></rect>
                         <path
                           d="M10.27 9.989 8.97 9.234l-3.896 2.263v4.51l3.896 2.256 3.896-2.255V8.993l2.162-1.252 2.162 1.252v2.504l-2.162 1.252-1.299-.754v2.006l1.299.755 3.896-2.255V7.99l-3.896-2.256-3.896 2.255v7.015L8.97 16.257l-2.162-1.252v-2.512l2.162-1.252 1.299.754z"
                           fill="#FFF"
@@ -287,13 +298,14 @@ const TrendingCollections = () => {
                   collection.isPositive
                     ? "text-green-500"
                     : collection.change === "0"
-                    ? theme === "dark"
-                      ? "text-slate-400"
-                      : "text-slate-600"
-                    : "text-red-500"
+                      ? theme === "dark"
+                        ? "text-slate-400"
+                        : "text-slate-600"
+                      : "text-red-500"
                 }`}
               >
-                {collection.change !== "0" && (collection.isPositive ? "+" : "")}
+                {collection.change !== "0" &&
+                  (collection.isPositive ? "+" : "")}
                 {collection.change}%
               </span>
             </div>

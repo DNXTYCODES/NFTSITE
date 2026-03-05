@@ -76,7 +76,9 @@ const Profile = () => {
               </label>
               <textarea
                 value={profile.bio}
-                onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
+                onChange={(e) =>
+                  setProfile({ ...profile, bio: e.target.value })
+                }
                 disabled={!isEditing}
                 className="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 rows="4"

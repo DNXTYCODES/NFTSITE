@@ -148,8 +148,8 @@ const CategoryFilter = () => {
                       ? "bg-blue-600 text-white border border-blue-500"
                       : "bg-blue-100 text-blue-900 border border-blue-300"
                     : theme === "dark"
-                    ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
-                    : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
+                      ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
+                      : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
                 }`}
               >
                 {category.name}
@@ -162,8 +162,8 @@ const CategoryFilter = () => {
                       ? "bg-blue-600 text-white border border-blue-500"
                       : "bg-blue-100 text-blue-900 border border-blue-300"
                     : theme === "dark"
-                    ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
-                    : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
+                      ? "bg-slate-800/50 text-slate-300 border border-slate-700 hover:bg-slate-700/50"
+                      : "bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200"
                 }`}
               >
                 {category.icon}

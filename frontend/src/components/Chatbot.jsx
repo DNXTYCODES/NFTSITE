@@ -1,52 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Chatbot = () => (
-  <div 
-    id="solar-assistant" 
+  <div
+    id="solar-assistant"
     className="min-h-screen bg-gradient-to-br from-white dark:from-slate-950 to-slate-50 dark:to-slate-900 py-12 px-4 sm:px-6 lg:px-8"
     itemScope
     itemType="https://schema.org/WebApplication"
@@ -55,32 +9,33 @@ const Chatbot = () => (
       {JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "SunPeak Solar Assistant",
-        "url": "https://sunpeak.com.ng/solar-assistant",
-        "description": "AI-powered solar calculator for Benin homes and businesses providing instant cost estimates, system recommendations, and energy savings analysis",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "offers": {
+        name: "SunPeak Solar Assistant",
+        url: "https://sunpeak.com.ng/solar-assistant",
+        description:
+          "AI-powered solar calculator for Benin homes and businesses providing instant cost estimates, system recommendations, and energy savings analysis",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        offers: {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "NGN"
+          price: "0",
+          priceCurrency: "NGN",
         },
-        "featureList": [
+        featureList: [
           "Solar Cost Estimation",
           "System Sizing Calculator",
           "Energy Savings Analysis",
           "Product Recommendations",
-          "Maintenance Scheduling"
+          "Maintenance Scheduling",
         ],
-        "areaServed": {
+        areaServed: {
           "@type": "GeoCircle",
-          "geoMidpoint": {
+          geoMidpoint: {
             "@type": "GeoCoordinates",
-            "latitude": 6.3350,
-            "longitude": 5.6037
+            latitude: 6.335,
+            longitude: 5.6037,
           },
-          "geoRadius": "50000"
-        }
+          geoRadius: "50000",
+        },
       })}
     </script>
 
@@ -92,7 +47,7 @@ const Chatbot = () => (
             Get Instant Solar Cost Estimates for Edo State Homes & Businesses
           </span>
         </h1>
-        
+
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <div className="badge badge-outline text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400">
             <span className="h-2 w-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-2 animate-pulse"></span>
@@ -111,26 +66,64 @@ const Chatbot = () => (
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 dark:from-blue-400 to-teal-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
         <div className="relative rounded-2xl bg-white dark:bg-slate-800 backdrop-blur-sm shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
           <div className="p-6 border-b border-slate-200 dark:border-slate-700">
-            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">How Our Benin Solar Calculator Helps You:</h2>
+            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+              How Our Benin Solar Calculator Helps You:
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
               {[
-                { icon: '💰', title: 'Cost Estimation', desc: 'Accurate solar pricing for Benin' },
-                { icon: '📦', title: 'Package Matching', desc: 'Tailored Edo State solutions' },
-                { icon: '📊', title: 'Savings Calculator', desc: 'Benin energy cost analysis' },
-                { icon: '🛠️', title: 'Installers', desc: 'Certified Benin technicians' },
-                { icon: '🔋', title: 'Battery Needs', desc: 'Edo power outage solutions' },
-                { icon: '🌞', title: 'Solar Potential', desc: 'Benin sunlight analysis' },
-                { icon: '📑', title: 'Permits', desc: 'Edo State requirements' },
-                { icon: '📅', title: 'Maintenance', desc: 'Local service scheduling' }
+                {
+                  icon: "💰",
+                  title: "Cost Estimation",
+                  desc: "Accurate solar pricing for Benin",
+                },
+                {
+                  icon: "📦",
+                  title: "Package Matching",
+                  desc: "Tailored Edo State solutions",
+                },
+                {
+                  icon: "📊",
+                  title: "Savings Calculator",
+                  desc: "Benin energy cost analysis",
+                },
+                {
+                  icon: "🛠️",
+                  title: "Installers",
+                  desc: "Certified Benin technicians",
+                },
+                {
+                  icon: "🔋",
+                  title: "Battery Needs",
+                  desc: "Edo power outage solutions",
+                },
+                {
+                  icon: "🌞",
+                  title: "Solar Potential",
+                  desc: "Benin sunlight analysis",
+                },
+                {
+                  icon: "📑",
+                  title: "Permits",
+                  desc: "Edo State requirements",
+                },
+                {
+                  icon: "📅",
+                  title: "Maintenance",
+                  desc: "Local service scheduling",
+                },
               ].map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
                   itemProp="feature"
                 >
                   <div className="text-2xl mb-2">{feature.icon}</div>
-                  <h3 className="font-medium text-slate-900 dark:text-white">{feature.title}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">{feature.desc}</p>
+                  <h3 className="font-medium text-slate-900 dark:text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    {feature.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -160,15 +153,24 @@ const Chatbot = () => (
 
       {/* Hidden SEO content */}
       <div className="sr-only" aria-hidden="true">
-        <p>Solar calculator Benin | Solar cost estimator Edo | How much solar do I need Nigeria</p>
-        <p>Solar panel calculator Benin City | Solar system sizing tool | Free solar estimate Edo State</p>
-        <p>Best solar calculator for Benin | Accurate solar estimates | SunPeak solar assistant</p>
+        <p>
+          Solar calculator Benin | Solar cost estimator Edo | How much solar do
+          I need Nigeria
+        </p>
+        <p>
+          Solar panel calculator Benin City | Solar system sizing tool | Free
+          solar estimate Edo State
+        </p>
+        <p>
+          Best solar calculator for Benin | Accurate solar estimates | SunPeak
+          solar assistant
+        </p>
       </div>
     </div>
   </div>
 );
 
-export default Chatbot;// const Chatbot = () => (
+export default Chatbot; // const Chatbot = () => (
 //   <div id="solar-assistant" className="min-h-screen bg-gradient-to-br from-[var(--bg)] to-[var(--card-bg)] py-12 px-4 sm:px-6 lg:px-8">
 //     <div className="max-w-4xl mx-auto space-y-8">
 //       <div className="text-center space-y-4 animate-fadeIn">
@@ -178,7 +180,7 @@ export default Chatbot;// const Chatbot = () => (
 //             Your 24/7 Solar Expert - Instant Calculations & Smart Recommendations
 //           </span>
 //         </h2>
-        
+
 //         <div className="flex flex-wrap justify-center gap-4 mt-6">
 //           <div className="badge badge-outline text-[var(--primary-neon)] border-[var(--primary-neon)]">
 //             <span className="h-2 w-2 bg-[var(--primary-neon)] rounded-full mr-2 animate-pulse"></span>
@@ -244,35 +246,6 @@ export default Chatbot;// const Chatbot = () => (
 
 // export default Chatbot;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // const Chatbot = () => (
 // //   <div id="chatbot-container"  className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-[#1a1a2e] dark:to-[#16213e] py-12 px-4 sm:px-6 lg:px-8">
 // //     <div className="max-w-4xl mx-auto space-y-8">
@@ -283,7 +256,7 @@ export default Chatbot;// const Chatbot = () => (
 // //             Ask me anything – responses in real-time ⚡
 // //           </span>
 // //         </h2>
-        
+
 // //         <div className="flex items-center justify-center space-x-2">
 // //           <span className="h-3 w-3 bg-green-400 rounded-full animate-pulse"></span>
 // //           <p className="text-sm text-gray-500 dark:text-gray-400">Online now</p>
@@ -311,5 +284,3 @@ export default Chatbot;// const Chatbot = () => (
 // // );
 
 // // export default Chatbot;
-
-

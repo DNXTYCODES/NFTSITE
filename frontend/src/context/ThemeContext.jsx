@@ -7,19 +7,22 @@ export const ThemeProvider = ({ children }) => {
     // Check localStorage for saved theme preference
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) return savedTheme;
-    
+
     // Check system preference
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       return "dark";
     }
-    
+
     return "light";
   });
 
   useEffect(() => {
     // Update localStorage
     localStorage.setItem("theme", theme);
-    
+
     // Update document class for Tailwind dark mode
     if (theme === "dark") {
       document.documentElement.classList.add("dark");

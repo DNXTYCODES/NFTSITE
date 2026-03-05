@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,12 +6,12 @@
 
 /* Light Mode (Default) */
 :root {
-  --primary-neon: #A4FF00;
-  --secondary-dark: #1A1A1A;
-  --text: #1A1A1A;
-  --bg: #F5F5F5;
-  --card-bg: #FFFFFF;
-  --border: #DDDDDD;
+  --primary-neon: #a4ff00;
+  --secondary-dark: #1a1a1a;
+  --text: #1a1a1a;
+  --bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --border: #dddddd;
   --text-muted: #666666;
   color-scheme: light;
 }
@@ -19,21 +19,21 @@
 /* Dark Mode */
 :root.dark,
 [data-theme="dark"] {
-  --primary-neon: #A4FF00;
-  --secondary-dark: #1A1A1A;
-  --text: #F0F0F0;
-  --bg: #1A1A1A;
-  --card-bg: #2D2D2D;
+  --primary-neon: #a4ff00;
+  --secondary-dark: #1a1a1a;
+  --text: #f0f0f0;
+  --bg: #1a1a1a;
+  --card-bg: #2d2d2d;
   --border: #333333;
   --text-muted: #888888;
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg: #F5F5F5;
-  --card-bg: #FFFFFF;
-  --text: #1A1A1A;
-  --border: #DDDDDD;
+  --bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --border: #dddddd;
   --text-muted: #666666;
   color-scheme: light;
 }
@@ -42,13 +42,14 @@
 body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-
-
 @keyframes bounce-slow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -59,8 +60,6 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 3s infinite;
 }
-
-
 
 .py-12 {
   background: var(--card-bg);
@@ -82,9 +81,6 @@ body {
   text-wrap: balance;
 }
 
-
-
-
 .leaflet-container {
   background: var(--card-bg) !important;
   z-index: 0;
@@ -101,12 +97,9 @@ body {
   background: var(--card-bg) !important;
 }
 
-
-
-
-
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     transform: rotate(var(--rotate)) translateY(-25px);
   }
@@ -116,11 +109,15 @@ body {
   }
 }
 
-
-
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {
@@ -131,11 +128,16 @@ body {
   box-shadow: 0 0 15px var(--primary-neon);
 }
 
-
 @keyframes gradient-rotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .animate-gradient-rotate {
@@ -143,32 +145,31 @@ body {
   animation: gradient-rotate 8s ease infinite;
 }
 
-a.active hr{
-    display: block;
+a.active hr {
+  display: block;
 }
 
-*{
-    font-family: Outfit;
+* {
+  font-family: Outfit;
 }
 
 .prata-regular {
-    font-family: "Prata", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  ::-webkit-scrollbar{
-    display: none;
-  }
+::-webkit-scrollbar {
+  display: none;
+}
 
-  
-  @media (max-width:640px) {
-    a.active{
-        /* background-color: white; */
-        background-color: #FEF3ED;
-        color: black;
-    }
+@media (max-width: 640px) {
+  a.active {
+    /* background-color: white; */
+    background-color: #fef3ed;
+    color: black;
   }
+}
 /*   
   @media (max-width:640px) {
     a.active{

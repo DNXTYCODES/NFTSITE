@@ -1,30 +1,33 @@
-import React from 'react'
-import HeroCarousel from '../components/HeroCarousel'
-import CuratedCollectionsCarousel from '../components/CuratedCollectionsCarousel'
-import HomeLayout from '../components/HomeLayout'
+import React from "react";
+import HeroCarousel from "../components/HeroCarousel";
+import CuratedCollectionsCarousel from "../components/CuratedCollectionsCarousel";
+import HomeLayout from "../components/HomeLayout";
 
 const Home = () => {
   return (
     <HomeLayout>
       {/* Hero Carousel Section */}
       <section aria-labelledby="hero-carousel-heading">
-        <h1 id="hero-carousel-heading" className="sr-only">Featured NFT Collections</h1>
+        <h1 id="hero-carousel-heading" className="sr-only">
+          Featured NFT Collections
+        </h1>
         <HeroCarousel />
       </section>
 
       {/* Curated Collections Carousel */}
       <section aria-labelledby="curated-collections-heading" className="mt-12">
-        <h2 id="curated-collections-heading" className="sr-only">Curated Collections</h2>
+        <h2 id="curated-collections-heading" className="sr-only">
+          Curated Collections
+        </h2>
         <CuratedCollectionsCarousel />
       </section>
 
       {/* Additional sections will go here */}
     </HomeLayout>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
 
 // Legacy sections - commented out for future implementation
 // import Hero from '../components/Hero'
@@ -47,37 +50,6 @@ export default Home
 // import HomeFAQ from '../components/HomeFAQ'
 // import SolarPackages from '../components/SolarPackages'
 // import LocationMap from '../components/LocationMap'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from 'react'
 // import Hero from '../components/Hero'
@@ -116,7 +88,7 @@ export default Home
 //       <SolarCalculator />
 //       <ReferralTeaser />
 //       <TrainingPreview />
-//       <OurTeam /> 
+//       <OurTeam />
 //       <HomeFAQ />
 //       <USPsection />
 //       {/* <LocationMap /> */}

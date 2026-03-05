@@ -199,21 +199,17 @@ const Sidebar = () => {
     },
   ];
 
-  const bgColor = theme === "dark" 
-    ? "bg-slate-950 border-slate-800" 
-    : "bg-white border-slate-200";
-  
-  const hoverBg = theme === "dark"
-    ? "hover:bg-slate-900"
-    : "hover:bg-slate-50";
-  
-  const textColor = theme === "dark"
-    ? "text-slate-300"
-    : "text-slate-600";
-  
-  const activeColor = theme === "dark"
-    ? "bg-blue-600 text-white"
-    : "bg-blue-100 text-blue-900";
+  const bgColor =
+    theme === "dark"
+      ? "bg-slate-950 border-slate-800"
+      : "bg-white border-slate-200";
+
+  const hoverBg = theme === "dark" ? "hover:bg-slate-900" : "hover:bg-slate-50";
+
+  const textColor = theme === "dark" ? "text-slate-300" : "text-slate-600";
+
+  const activeColor =
+    theme === "dark" ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-900";
 
   const SidebarItem = ({ item }) => (
     <Link
@@ -236,7 +232,9 @@ const Sidebar = () => {
 
   const ExpandableItem = ({ item }) => (
     <button
-      onClick={() => setExpandedMenu(expandedMenu === item.name ? null : item.name)}
+      onClick={() =>
+        setExpandedMenu(expandedMenu === item.name ? null : item.name)
+      }
       className={`w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-md transition-all duration-200 ${
         expandedMenu === item.name
           ? `${theme === "dark" ? "bg-slate-800" : "bg-slate-100"} ${textColor}`
@@ -296,13 +294,15 @@ const Sidebar = () => {
               <ExpandableItem key={item.name} item={item} />
             ) : (
               <SidebarItem key={item.path} item={item} />
-            )
+            ),
           )}
         </nav>
       </aside>
 
       {/* Main Content Offset */}
-      <div className={`transition-all duration-300 ${isExpanded ? "ml-56" : "ml-20"}`}>
+      <div
+        className={`transition-all duration-300 ${isExpanded ? "ml-56" : "ml-20"}`}
+      >
         {/* Content will be placed here */}
       </div>
     </>

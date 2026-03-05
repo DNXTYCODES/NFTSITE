@@ -38,14 +38,17 @@ export const themeColors = {
     "bg-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800",
 
   // Badges
-  badgePrimary: "bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300",
+  badgePrimary:
+    "bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300",
   badgeSecondary:
     "bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200",
-  badgeSuccess: "bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-300",
+  badgeSuccess:
+    "bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-300",
   badgeDanger: "bg-red-100 dark:bg-red-900/30 text-red-900 dark:text-red-300",
 
   // Other
-  scrollbar: "scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700",
+  scrollbar:
+    "scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700",
 };
 
 /**

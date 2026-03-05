@@ -116,9 +116,7 @@ const HeroCarousel = () => {
                         <div className="flex items-center gap-2">
                           <h2
                             className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${
-                              theme === "dark"
-                                ? "text-white"
-                                : "text-slate-900"
+                              theme === "dark" ? "text-white" : "text-slate-900"
                             }`}
                           >
                             {slide.name}
@@ -140,7 +138,8 @@ const HeroCarousel = () => {
                               : "text-slate-700"
                           }`}
                         >
-                          By <span className="font-semibold">{slide.creator}</span>
+                          By{" "}
+                          <span className="font-semibold">{slide.creator}</span>
                           <svg
                             aria-label="Verified"
                             className="inline w-3.5 h-3.5 ml-1 text-blue-500"
@@ -174,12 +173,11 @@ const HeroCarousel = () => {
                           </span>
                           <span
                             className={`text-sm sm:text-base font-mono font-semibold ${
-                              theme === "dark"
-                                ? "text-white"
-                                : "text-slate-900"
+                              theme === "dark" ? "text-white" : "text-slate-900"
                             }`}
                           >
-                            {slide.floorPrice} <span className="text-xs">ETH</span>
+                            {slide.floorPrice}{" "}
+                            <span className="text-xs">ETH</span>
                           </span>
                         </div>
 
@@ -202,9 +200,7 @@ const HeroCarousel = () => {
                           </span>
                           <span
                             className={`text-sm sm:text-base font-mono font-semibold ${
-                              theme === "dark"
-                                ? "text-white"
-                                : "text-slate-900"
+                              theme === "dark" ? "text-white" : "text-slate-900"
                             }`}
                           >
                             {slide.items}
@@ -230,12 +226,11 @@ const HeroCarousel = () => {
                           </span>
                           <span
                             className={`text-sm sm:text-base font-mono font-semibold ${
-                              theme === "dark"
-                                ? "text-white"
-                                : "text-slate-900"
+                              theme === "dark" ? "text-white" : "text-slate-900"
                             }`}
                           >
-                            {slide.totalVolume} <span className="text-xs">ETH</span>
+                            {slide.totalVolume}{" "}
+                            <span className="text-xs">ETH</span>
                           </span>
                         </div>
                       </div>
