@@ -126,7 +126,7 @@ const CategoryFilter = () => {
 
   return (
     <div
-      className={`sticky top-16 z-40 ml-20 transition-colors duration-300 ${
+      className={`lg:ml-20 transition-colors duration-300 ${
         theme === "dark"
           ? "bg-slate-900/95 border-b border-slate-800"
           : "bg-white/95 border-b border-slate-200"

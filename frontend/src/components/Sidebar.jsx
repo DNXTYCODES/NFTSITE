@@ -267,12 +267,12 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* SIDEBAR */}
+      {/* SIDEBAR - Hidden on mobile, visible on large screens */}
       <aside
         onMouseEnter={() => setIsExpanded(true)}
         onMouseLeave={() => setIsExpanded(false)}
-        className={`fixed left-0 top-0 h-screen pt-20 flex flex-col border-r transition-all duration-300 ${
-          isExpanded ? "w-56" : "w-20"
+        className={`hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:pt-20 lg:flex lg:flex-col border-r transition-all duration-300 ${
+          isExpanded ? "lg:w-56" : "lg:w-20"
         } ${bgColor} z-40`}
       >
         <nav className="flex-1 overflow-y-auto px-2 py-4 space-y-1">
@@ -299,9 +299,9 @@ const Sidebar = () => {
         </nav>
       </aside>
 
-      {/* Main Content Offset */}
+      {/* Main Content Offset - Only on large screens */}
       <div
-        className={`transition-all duration-300 ${isExpanded ? "ml-56" : "ml-20"}`}
+        className={`hidden lg:block transition-all duration-300 ${isExpanded ? "lg:ml-56" : "lg:ml-20"}`}
       >
         {/* Content will be placed here */}
       </div>

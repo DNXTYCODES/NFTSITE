@@ -1,6 +1,7 @@
 import React from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import CuratedCollectionsCarousel from "../components/CuratedCollectionsCarousel";
+import TrendingCollectionsGrid from "../components/TrendingCollectionsGrid";
 import HomeLayout from "../components/HomeLayout";
 
 const Home = () => {
@@ -20,6 +21,14 @@ const Home = () => {
           Curated Collections
         </h2>
         <CuratedCollectionsCarousel />
+      </section>
+
+      {/* Trending Collections Grid */}
+      <section aria-labelledby="trending-collections-heading" className="mt-12">
+        <h2 id="trending-collections-heading" className="sr-only">
+          Trending Collections
+        </h2>
+        <TrendingCollectionsGrid />
       </section>
 
       {/* Additional sections will go here */}

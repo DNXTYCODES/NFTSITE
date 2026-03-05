@@ -172,7 +172,7 @@ const CuratedCollectionsCarousel = () => {
                           {collection.verified && (
                             <svg
                               aria-label="Verified"
-                              className="w-3.5 h-3.5 text-blue-500 shrink-0 flex-shrink-0"
+                              className="w-3.5 h-3.5 text-blue-500 shrink-0"
                               fill="currentColor"
                               viewBox="0 -960 960 960"
                               xmlns="http://www.w3.org/2000/svg"

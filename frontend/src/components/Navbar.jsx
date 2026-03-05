@@ -59,25 +59,25 @@ const Navbar = () => {
               : "bg-white border-b border-slate-100/50"
         }`}
       >
-        <div className="mx-auto w-full max-w-[calc(theme(screens.4xl)+48px)] px-4 lg:px-6">
-          <div className="flex items-center justify-between h-16">
+        <div className="mx-auto w-full max-w-[calc(theme(screens.4xl)+48px)] px-3 sm:px-4 lg:px-6">
+          <div className="flex items-center justify-between h-16 sm:h-18 lg:h-16">
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
               <Link
                 to="/"
-                className={`flex items-center gap-2 font-bold text-2xl transition-colors ${
+                className={`flex items-center gap-1 sm:gap-2 font-bold text-lg sm:text-xl lg:text-2xl transition-colors ${
                   theme === "dark"
                     ? "text-white hover:text-blue-400"
                     : "text-slate-900 hover:text-blue-600"
                 }`}
               >
                 <span>{/* Logo can be added here */}</span>
-                <span>NFTMarket</span>
+                <span className="hidden sm:inline">NFTMarket</span>
               </Link>
             </div>
 
             {/* Search Bar - Desktop */}
-            <div className="hidden lg:flex flex-1 mx-8 max-w-sm">
+            <div className="hidden lg:flex flex-1 mx-4 xl:mx-8 max-w-sm">
               <form onSubmit={handleSearchSubmit} className="w-full">
                 <div
                   className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all duration-150 ${
@@ -133,10 +133,10 @@ const Navbar = () => {
             </div>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
               {/* Connect Wallet Button */}
               <button
-                className={`hidden md:inline-flex px-4 py-2 rounded-md font-medium text-sm transition-all duration-200 ${
+                className={`hidden md:inline-flex px-2 sm:px-4 py-2 rounded-md font-medium text-xs sm:text-sm transition-all ${
                   theme === "dark"
                     ? "bg-slate-800 text-white hover:bg-slate-700 border border-slate-700"
                     : "bg-slate-100 text-slate-900 hover:bg-slate-200 border border-slate-300"
@@ -147,20 +147,20 @@ const Navbar = () => {
 
               {/* Divider */}
               <div
-                className={`hidden md:block w-px h-6 ${theme === "dark" ? "bg-slate-700/50" : "bg-slate-300/50"}`}
+                className={`hidden md:block w-px h-5 sm:h-6 ${theme === "dark" ? "bg-slate-700/50" : "bg-slate-300/50"}`}
               ></div>
 
               {/* Profile/Account */}
               <Link
                 to="/profile"
-                className={`p-2.5 rounded-md transition-all duration-200 ${
+                className={`p-1.5 sm:p-2 rounded-md transition-all ${
                   theme === "dark"
                     ? "hover:bg-slate-800 text-slate-300"
                     : "hover:bg-slate-100 text-slate-700"
                 }`}
                 aria-label="Profile"
               >
-                <svg className="w-5 h-5 fill-current" viewBox="0 -960 960 960">
+                <svg className="w-4 sm:w-5 h-4 sm:h-5 fill-current" viewBox="0 -960 960 960">
                   <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Z" />
                 </svg>
               </Link>
@@ -168,7 +168,7 @@ const Navbar = () => {
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
-                className={`p-2.5 rounded-md transition-all duration-200 ${
+                className={`p-1.5 sm:p-2 rounded-md transition-all ${
                   theme === "dark"
                     ? "hover:bg-slate-800 text-slate-300"
                     : "hover:bg-slate-100 text-slate-700"
@@ -177,7 +177,7 @@ const Navbar = () => {
               >
                 {theme === "dark" ? (
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 sm:w-5 h-4 sm:h-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -185,7 +185,7 @@ const Navbar = () => {
                   </svg>
                 ) : (
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 sm:w-5 h-4 sm:h-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -197,14 +197,14 @@ const Navbar = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-2.5 rounded-md transition-all duration-200 ${
+                className={`lg:hidden p-1.5 sm:p-2 rounded-md transition-all ${
                   theme === "dark"
                     ? "hover:bg-slate-800 text-slate-300"
                     : "hover:bg-slate-100 text-slate-700"
                 }`}
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -318,12 +318,12 @@ const Navbar = () => {
           className={`fixed inset-0 z-40 lg:hidden ${theme === "dark" ? "bg-slate-950/95" : "bg-white/95"} backdrop-blur-sm`}
         >
           <div
-            className={`flex flex-col h-full pt-20 px-4 ${theme === "dark" ? "bg-slate-950" : "bg-white"}`}
+            className={`flex flex-col h-full pt-20 sm:pt-24 px-3 sm:px-4 overflow-y-auto ${theme === "dark" ? "bg-slate-950" : "bg-white"}`}
           >
             {/* Mobile Search */}
             <form onSubmit={handleSearchSubmit} className="mb-6">
               <div
-                className={`flex items-center gap-2 px-3 py-2.5 rounded-md border transition-all ${
+                className={`flex items-center gap-2 px-3 py-3 sm:py-3.5 rounded-md border transition-all ${
                   theme === "dark"
                     ? "bg-slate-800/40 border-slate-700/50"
                     : "bg-slate-50 border-slate-200"
@@ -358,7 +358,7 @@ const Navbar = () => {
                     to={item.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={({ isActive }) => `
-                      block px-4 py-3 rounded-md font-medium transition-all
+                      block px-4 py-3 rounded-md font-medium text-sm sm:text-base transition-all
                       ${
                         isActive
                           ? theme === "dark"
@@ -376,6 +376,47 @@ const Navbar = () => {
               ))}
             </ul>
 
+            {/* Additional Navigation (from Sidebar on mobile) */}
+            <div
+              className={`mb-6 pb-6 border-b ${
+                theme === "dark" ? "border-slate-800" : "border-slate-200"
+              }`}
+            >
+              <p className={`text-xs font-semibold px-4 mb-2 ${theme === "dark" ? "text-slate-400" : "text-slate-500"} uppercase tracking-wider`}>
+                Collections & More
+              </p>
+              <ul className="space-y-1">
+                {[
+                  { name: "Discover", path: "/" },
+                  { name: "Collections", path: "/collections" },
+                  { name: "Tokens", path: "/tokens" },
+                  { name: "Drops", path: "/drops" },
+                  { name: "Activity", path: "/activity" },
+                ].map((item, index) => (
+                  <li key={index}>
+                    <NavLink
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={({ isActive }) => `
+                        flex items-center gap-3 px-4 py-2 rounded-md text-sm transition-all
+                        ${
+                          isActive
+                            ? theme === "dark"
+                              ? "bg-blue-600 text-white"
+                              : "bg-blue-100 text-blue-900"
+                            : theme === "dark"
+                              ? "text-slate-300 hover:bg-slate-800"
+                              : "text-slate-700 hover:bg-slate-100"
+                        }
+                      `}
+                    >
+                      <span>{item.name}</span>
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Mobile Actions */}
             <div
               className="space-y-3 border-t pt-4"
@@ -385,7 +426,7 @@ const Navbar = () => {
               }}
             >
               <button
-                className={`w-full px-4 py-3 rounded-md font-medium transition-all ${
+                className={`w-full px-4 py-3 rounded-md font-medium text-sm transition-all ${
                   theme === "dark"
                     ? "bg-blue-600 text-white hover:bg-blue-700"
                     : "bg-blue-600 text-white hover:bg-blue-700"
@@ -396,7 +437,7 @@ const Navbar = () => {
 
               <button
                 onClick={toggleTheme}
-                className={`w-full px-4 py-3 rounded-md font-medium transition-all flex items-center justify-center gap-2 ${
+                className={`w-full px-4 py-3 rounded-md font-medium text-sm transition-all flex items-center justify-center gap-2 ${
                   theme === "dark"
                     ? "bg-slate-800 text-slate-300 hover:bg-slate-700"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -429,7 +470,7 @@ const Navbar = () => {
 
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className={`w-full px-4 py-3 rounded-md font-medium transition-all ${
+                className={`w-full px-4 py-3 rounded-md font-medium text-sm transition-all ${
                   theme === "dark"
                     ? "bg-slate-800 text-slate-300 hover:bg-slate-700"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"

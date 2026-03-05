@@ -112,13 +112,13 @@ const App = () => {
 
       <CategoryFilter />
 
-      <div className="flex">
+      <div className="flex w-full">
         <Sidebar />
         <main
           id="main-content"
-          className="flex-1 ml-20 transition-all duration-300"
+          className="flex-1 w-full transition-all duration-300 lg:ml-20"
         >
-          <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto px-3 sm:px-4 lg:px-6">
             <SearchBar />
 
             <Routes>
