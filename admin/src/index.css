@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+
+select,input,textarea{
+    border: 1px solid #c2c2c2;
+    outline-color: #C586A5;
+    border-radius: 4px;
+}
+
+.active{
+    background-color: #ffebf5;
+    border-color: #C586A5;
+}
+
+
+
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary-neon: #A4FF00;
+  --secondary-dark: #1A1A1A;
+  --text: #F0F0F0;
+  --bg: #1A1A1A;
+  --card-bg: #2D2D2D;
+  --border: #333333;
+  --text-muted: #888888;
+}
+
+[data-theme="light"] {
+  --bg: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --text: #1A1A1A;
+  --border: #DDDDDD;
+  --text-muted: #666666;
+}
+
+/* Improved gradient transitions */
+.bg-gradient-to-br {
+  transition: background 0.3s ease;
+}
+
+/* Better blur handling */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Ensure text remains readable over gradients */
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 15px var(--primary-neon);
+}
+
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-rotate {
+  background-size: 400% 400%;
+  animation: gradient-rotate 8s ease infinite;
+}
+
+a.active hr{
+    display: block;
+}
+
+*{
+    font-family: Outfit;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  
+  @media (max-width:640px) {
+    a.active{
+        /* background-color: white; */
+        background-color: #FEF3ED;
+        color: black;
+    }
+  }
+/*   
+  @media (max-width:640px) {
+    a.active{
+        background-color: black;
+        color: white;
+    }
+  } */
