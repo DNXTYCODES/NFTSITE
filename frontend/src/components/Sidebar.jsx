@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
-const Sidebar = () => {
+const Sidebar = ({ onHoverChange }) => {
   const { theme } = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
@@ -269,8 +269,14 @@ const Sidebar = () => {
     <>
       {/* SIDEBAR - Hidden on mobile, visible on large screens */}
       <aside
-        onMouseEnter={() => setIsExpanded(true)}
-        onMouseLeave={() => setIsExpanded(false)}
+        onMouseEnter={() => {
+          setIsExpanded(true);
+          onHoverChange?.(true);
+        }}
+        onMouseLeave={() => {
+          setIsExpanded(false);
+          onHoverChange?.(false);
+        }}
         className={`hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:pt-20 lg:flex lg:flex-col border-r transition-all duration-300 ${
           isExpanded ? "lg:w-56" : "lg:w-20"
         } ${bgColor} z-40`}

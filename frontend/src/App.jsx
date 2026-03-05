@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "./context/ThemeContext";
 import Home from "./pages/Home";
 import Collection from "./pages/Collection";
@@ -11,7 +11,6 @@ import OurWork from "./pages/OurWork";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import CategoryFilter from "./components/CategoryFilter";
-import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,13 +32,13 @@ import Profile from "./pages/Profile";
 import Resources from "./pages/Resources";
 import Settings from "./pages/Settings";
 import Support from "./pages/Support";
-import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import { initializeGA, trackPageView } from "./utils/googleAnalytics";
 import "./utils/browserCompat"; // Load polyfills
 
 const App = () => {
   const location = useLocation();
   const { theme } = useTheme();
+  const [sidebarHovered, setSidebarHovered] = useState(false);
 
   // Initialize Google Analytics on component mount
   useEffect(() => {
@@ -113,10 +112,12 @@ const App = () => {
       <CategoryFilter />
 
       <div className="flex w-full">
-        <Sidebar />
+        <Sidebar onHoverChange={setSidebarHovered} />
         <main
           id="main-content"
-          className="flex-1 w-full transition-all duration-300 lg:ml-20"
+          className={`flex-1 w-full transition-all duration-300 lg:ml-20 ${
+            sidebarHovered ? "blur-sm pointer-events-none" : ""
+          }`}
         >
           <div className="mx-auto px-3 sm:px-4 lg:px-6">
             <SearchBar />
@@ -213,38 +214,6 @@ const App = () => {
             </Routes>
           </div>
         </main>
-      </div>
-
-      <Footer />
-
-      {/* Floating Contact Bubbles */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-4">
-        {/* WhatsApp Bubble */}
-        <a
-          href="https://wa.me/2348134553751"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-green-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-all group animate-bounce-slow"
-          aria-label="Chat with us on WhatsApp"
-        >
-          <FaWhatsapp className="text-white text-2xl" />
-          <span className="absolute right-full top-1/2 transform -translate-y-1/2 mr-3 bg-[var(--card-bg)] text-[var(--text)] text-sm font-medium py-1 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            Chat with us
-          </span>
-        </a>
-
-        {/* Phone Call Bubble */}
-        <a
-          href="tel:+2348134553751"
-          className="w-14 h-14 rounded-full bg-[var(--primary-neon)] flex items-center justify-center shadow-lg hover:shadow-xl transition-all group animate-bounce-slow"
-          aria-label="Call us"
-          style={{ animationDelay: "0.2s" }}
-        >
-          <FaPhone className="text-[var(--secondary-dark)] text-xl" />
-          <span className="absolute right-full top-1/2 transform -translate-y-1/2 mr-3 bg-[var(--card-bg)] text-[var(--text)] text-sm font-medium py-1 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            Call us now
-          </span>
-        </a>
       </div>
     </div>
   );

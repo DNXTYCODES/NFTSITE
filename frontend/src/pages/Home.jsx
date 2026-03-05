@@ -2,6 +2,7 @@ import React from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import CuratedCollectionsCarousel from "../components/CuratedCollectionsCarousel";
 import TrendingCollectionsGrid from "../components/TrendingCollectionsGrid";
+import FeaturedTokens from "../components/FeaturedTokens";
 import HomeLayout from "../components/HomeLayout";
 
 const Home = () => {
@@ -29,6 +30,14 @@ const Home = () => {
           Trending Collections
         </h2>
         <TrendingCollectionsGrid />
+      </section>
+
+      {/* Featured Tokens Section */}
+      <section aria-labelledby="featured-tokens-heading" className="mt-12">
+        <h2 id="featured-tokens-heading" className="sr-only">
+          Featured Tokens
+        </h2>
+        <FeaturedTokens />
       </section>
 
       {/* Additional sections will go here */}
